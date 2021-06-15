@@ -41,7 +41,8 @@ namespace Game4
         {
           
             _elapsed_time += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-            if (_elapsed_time > 1000.0f)
+            if (_elapsed_time > 1000.0f) // в орининале запись такая, но не компилится:  if (_elapsed_time &gt;= 1000.0f)
+
             {
                 _fps = _total_frames;
                 _total_frames = 0;
