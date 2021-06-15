@@ -41,7 +41,7 @@ namespace Game4
         {
           
             _elapsed_time += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-            if (_elapsed_time > 1000.0f) // в орининале запись такая, но не компилится:  if (_elapsed_time &gt;= 1000.0f)
+            if (_elapsed_time == 1000.0f) // в орининале запись такая, но не компилится:  if (_elapsed_time &gt;= 1000.0f)
 
             {
                 _fps = _total_frames;
@@ -59,7 +59,7 @@ namespace Game4
             _total_frames++;
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
-            spriteBatch.DrawString(fontInGame, string.Format($"FPS={0}", _fps),
+            spriteBatch.DrawString(fontInGame, string.Format("FPS={0}", _fps),
                new Vector2(0, 0), Color.White);
 
 
